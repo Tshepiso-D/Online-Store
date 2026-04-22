@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="shop.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">URBAN<span>.</span>THREADS</a>
+    <div class="nav-links">
+      <a href="shop.html" class="active">Shop</a>
+      <a href="shop.html?cat=hoodies">Hoodies</a>
+      <a href="shop.html?cat=tshirts">T-Shirts</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=accessories">Accessories</a>
+    </div>
+    <div class="nav-actions">
+      <span id="user-display"></span>
+      <a href="cart.html" class="btn-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="btn-nav primary" id="auth-btn">Sign In</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>THE <span>SHOP</span></h1>
+    <div class="results-info"><span id="results-count">—</span> PRODUCTS</div>
+  </div>
+
+  <div class="shop-layout">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="filter-section">
+        <div class="filter-title">// Category</div>
+        <button class="filter-btn active" data-cat="all" onclick="filterCat(this,'all')">
+          All Products <span class="filter-count" id="count-all">—</span>
+        </button>
+        <button class="filter-btn" data-cat="Hoodies" onclick="filterCat(this,'Hoodies')">
+          Hoodies <span class="filter-count" id="count-Hoodies">—</span>
+        </button>
+        <button class="filter-btn" data-cat="T-Shirts" onclick="filterCat(this,'T-Shirts')">
+          T-Shirts <span class="filter-count" id="count-T-Shirts">—</span>
+        </button>
+        <button class="filter-btn" data-cat="Sneakers" onclick="filterCat(this,'Sneakers')">
+          Sneakers <span class="filter-count" id="count-Sneakers">—</span>
+        </button>
+        <button class="filter-btn" data-cat="Accessories" onclick="filterCat(this,'Accessories')">
+          Accessories <span class="filter-count" id="count-Accessories">—</span>
+        </button>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">// Max Price</div>
+        <div class="price-range">
+          <input type="range" id="price-range" min="0" max="200" value="200" step="5"
+                 oninput="updatePrice(this.value)"/>
+          <div class="price-labels">
+            <span>$0</span>
+            <span id="price-val">$200</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">// Sort By</div>
+        <select class="sort-select" id="sort-select" onchange="renderProducts()">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <main class="products-area">
+      <div class="search-bar">
+        <span>🔍</span>
+        <input type="text" id="search-input" placeholder="Search products..." oninput="renderProducts()"/>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Loading skeletons -->
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+        <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-info"></div></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">✓ ADDED TO CART</div>
+
+  <footer>
+    <div class="logo">URBAN<span>.</span>THREADS</div>
+    <p>© 2025 Urban Threads. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script type="module" src="./shop.js"></script>
+</body>
+</html>

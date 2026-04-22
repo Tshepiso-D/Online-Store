@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart — Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./cart.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">URBAN<span>.</span>THREADS</a>
+    <div class="nav-right">
+      <span id="user-display"></span>
+      <a href="shop.html" class="btn-nav">← Continue Shopping</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>MY <span>CART</span></h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Cart
+    </div>
+  </div>
+
+  <!-- AUTH GATE -->
+  <div id="auth-gate">
+    <div class="gate-icon">🔒</div>
+    <div class="gate-title">Sign In to View Cart</div>
+    <p class="gate-text">You need to be logged in to view your cart and checkout.</p>
+    <a href="login.html?redirect=cart.html" class="btn-big">Sign In / Register</a>
+  </div>
+
+  <!-- CART CONTENT -->
+  <div id="cart-content">
+    <div class="cart-layout">
+      <!-- ITEMS -->
+      <div class="cart-items">
+        <div class="cart-items-header">
+          <div class="cart-items-title">// Your Items (<span id="item-count">0</span>)</div>
+          <button class="clear-cart-btn" onclick="clearCart()">Clear All</button>
+        </div>
+
+        <div id="cart-list"></div>
+        <div id="empty-cart">
+          <div class="empty-icon">🛒</div>
+          <div class="empty-title">YOUR CART IS EMPTY</div>
+          <p class="empty-text">Looks like you haven't added anything yet. Hit the shop and find your next fit.</p>
+          <a href="shop.html" class="btn-big">Start Shopping</a>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="cart-summary">
+        <div class="summary-title">ORDER SUMMARY</div>
+
+        <div class="summary-row">
+          <span class="summary-label">Subtotal</span>
+          <span class="summary-value" id="subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Shipping</span>
+          <span class="summary-value" id="shipping-val">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Discount</span>
+          <span class="summary-value" id="discount-val" style="color: #2ecc71;">-$0.00</span>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total-row">
+          <span class="summary-total-label">TOTAL</span>
+          <span class="summary-total-value" id="total-val">$0.00</span>
+        </div>
+
+        <!-- Promo -->
+        <div class="promo-wrap">
+          <input type="text" class="promo-input" id="promo-input" placeholder="PROMO CODE"/>
+          <button class="promo-btn" onclick="applyPromo()">APPLY</button>
+        </div>
+        <div class="promo-msg" id="promo-msg"></div>
+
+        <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">CHECKOUT NOW</button>
+        <a href="shop.html" class="continue-shopping">← Continue Shopping</a>
+
+        <div class="security-badges">
+          <div class="sec-badge">🔒 SECURE</div>
+          <div class="sec-badge">🚚 FREE SHIP R500+</div>
+          <div class="sec-badge">↩️ FREE RETURNS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <div class="modal-title">ORDER PLACED!</div>
+      <p class="modal-text">Your order has been confirmed and is being prepared. You'll receive a confirmation email soon.</p>
+      <div class="modal-order" id="order-number">ORDER #UT-000000</div>
+      <a href="shop.html" class="btn-big" style="display:inline-block;" onclick="document.getElementById('success-modal').classList.remove('show')">KEEP SHOPPING</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="logo">URBAN<span>.</span>THREADS</div>
+    <p>© 2025 Urban Threads. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script type="module" src="cart.js"></script>
+</body>
+</html>

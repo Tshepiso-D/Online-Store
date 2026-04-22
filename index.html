@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Threads — Streetwear for the Streets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">URBAN<span>.</span>THREADS</a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="shop.html?cat=hoodies">Hoodies</a>
+      <a href="shop.html?cat=tshirts">T-Shirts</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=accessories">Accessories</a>
+    </div>
+    <div class="nav-actions">
+      <span id="user-display"></span>
+      <a href="cart.html" class="btn-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="btn-nav primary" id="auth-btn">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">// New Drop SS2025</div>
+      <h1 class="hero-title">
+        DRESS<br>
+        THE <span class="outline">STREETS</span><br>
+        <span class="accent-word">YOUR WAY</span>
+      </h1>
+      <p class="hero-sub">
+        Streetwear engineered for those who don't follow trends — they start them.
+        Limited drops. Infinite attitude.
+      </p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn-primary">Shop Now</a>
+        <a href="shop.html?cat=new" class="btn-secondary">New Drops</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Products</div>
+        </div>
+        <div>
+          <div class="stat-num">50K</div>
+          <div class="stat-label">Customers</div>
+        </div>
+        <div>
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?w=800&q=80" alt="Hero" class="hero-img"/>
+      <div class="hero-floating-label">SS2025 COLLECTION ↗</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track">
+      <span class="marquee-item">HOODIES <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">T-SHIRTS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">SNEAKERS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">ACCESSORIES <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">NEW DROPS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">FREE SHIPPING <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">URBAN THREADS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">HOODIES <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">T-SHIRTS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">SNEAKERS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">ACCESSORIES <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">NEW DROPS <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">FREE SHIPPING <span class="marquee-dot">◆</span></span>
+      <span class="marquee-item">URBAN THREADS <span class="marquee-dot">◆</span></span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="section-header reveal">
+      <div class="section-title">SHOP BY<br><span>CATEGORY</span></div>
+      <a href="shop.html" class="section-link">View All Products →</a>
+    </div>
+    <div class="categories-grid reveal">
+      <a href="shop.html?cat=hoodies" class="cat-card" style="text-decoration:none;color:inherit;">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80" alt="Hoodies" class="cat-bg"/>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-name">HOODIES</div>
+          <div class="cat-count">24 Products</div>
+          <div class="cat-arrow">↗</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=tshirts" class="cat-card" style="text-decoration:none;color:inherit;">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="T-Shirts" class="cat-bg"/>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-name">T-SHIRTS</div>
+          <div class="cat-count">36 Products</div>
+          <div class="cat-arrow">↗</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=sneakers" class="cat-card" style="text-decoration:none;color:inherit;">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Sneakers" class="cat-bg"/>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-name">SNEAKERS</div>
+          <div class="cat-count">18 Products</div>
+          <div class="cat-arrow">↗</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=accessories" class="cat-card" style="text-decoration:none;color:inherit;">
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80" alt="Accessories" class="cat-bg"/>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-name">ACCESSORIES</div>
+          <div class="cat-count">42 Products</div>
+          <div class="cat-arrow">↗</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <div class="featured-strip reveal">
+    <div class="featured-text">
+      <div class="label">// Featured Picks</div>
+      <h2>THIS WEEK'S HEAT</h2>
+      <p>Carefully curated drops that are flying off the virtual shelves. Don't sleep on these.</p>
+      <br><br>
+      <a href="shop.html" class="btn-primary">Browse All</a>
+    </div>
+    <div class="featured-products" id="featured-products">
+      <!-- Populated dynamically or static fallback -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=400&q=80" alt="Hoodie"/>
+          <div class="product-badge">HOT</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Oversized Hoodie</div>
+          <div class="product-cat">Hoodies</div>
+          <div class="product-price">$49.99</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80" alt="Tee"/>
+          <div class="product-badge">NEW</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Graphic Tee Vol.3</div>
+          <div class="product-cat">T-Shirts</div>
+          <div class="product-price">$29.99</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80" alt="Sneaker"/>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Retro Runner</div>
+          <div class="product-cat">Sneakers</div>
+          <div class="product-price">$89.99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="section-title reveal" style="margin-bottom:40px;">WHY <span>URBAN THREADS</span></div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <div class="why-title">Fast Delivery</div>
+        <div class="why-text">Orders dispatched within 24 hours. Express shipping available to all major cities.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔥</div>
+        <div class="why-title">Limited Drops</div>
+        <div class="why-text">Every piece is limited edition. When it's gone, it's gone. Real streetwear energy.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">♻️</div>
+        <div class="why-title">Sustainable</div>
+        <div class="why-text">Organic cotton and recycled materials. Looking good shouldn't cost the planet.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💯</div>
+        <div class="why-title">Authenticity</div>
+        <div class="why-text">Every item is verified and quality checked before it leaves our warehouse.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <div class="logo">URBAN<span>.</span>THREADS</div>
+      <p>Streetwear for those who live and breathe the culture. Premium quality, street attitude.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="shop.html?cat=hoodies">Hoodies</a>
+      <a href="shop.html?cat=tshirts">T-Shirts</a>
+      <a href="shop.html?cat=sneakers">Sneakers</a>
+      <a href="shop.html?cat=accessories">Accessories</a>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <a href="login.html">Sign In</a>
+      <a href="login.html">Register</a>
+      <a href="cart.html">My Cart</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="#">About</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Returns</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <p>© 2025 Urban Threads. All rights reserved.</p>
+    <p>Built with Firebase + ❤️</p>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module" scr="./index.js"></script>
+</body>
+</html>

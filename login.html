@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In — Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./login.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- LEFT BRANDING -->
+  <div class="left-panel">
+    <div class="left-bg"></div>
+    <div class="left-overlay"></div>
+    <div class="left-content">
+      <div class="left-logo">URBAN<span>.</span>THREADS</div>
+      <div class="left-tagline">
+        WEAR YOUR<br>
+        <span class="outline">STORY</span>
+      </div>
+      <p class="left-sub">
+        Join over 50,000 streetwear heads who shop the latest drops, exclusives, and limited edition pieces.
+      </p>
+      <div class="left-badges">
+        <div class="badge">FREE RETURNS</div>
+        <div class="badge">SECURE CHECKOUT</div>
+        <div class="badge">FAST DELIVERY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="right-panel">
+    <a href="index.html" class="back-link">← Back to Store</a>
+
+    <div class="form-header">
+      <div class="form-mode">
+        <button class="mode-btn active" id="tab-login" onclick="switchMode('login')">Login</button>
+        <button class="mode-btn" id="tab-signup" onclick="switchMode('signup')">Sign Up</button>
+      </div>
+
+      <h1 class="form-title" id="form-title">WELCOME<br><span>BACK</span></h1>
+      <p class="form-subtitle" id="form-subtitle">Sign in to your Urban Threads account.</p>
+    </div>
+
+    <div class="form-error" id="form-error"></div>
+    <div class="form-success" id="form-success"></div>
+
+    <!-- LOGIN FORM -->
+    <div id="login-form">
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" id="login-email" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <div class="password-wrap">
+          <input type="password" class="form-input" id="login-password" placeholder="••••••••" style="padding-right:50px"/>
+          <button class="password-toggle" onclick="togglePw('login-password',this)" type="button">👁</button>
+        </div>
+        <a href="#" class="forgot-link" onclick="handleForgotPassword(event)">Forgot password?</a>
+      </div>
+      <button class="submit-btn" id="login-btn" onclick="handleLogin()">SIGN IN</button>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signup-form" style="display:none;">
+      <div class="form-group">
+        <label class="form-label">Display Name</label>
+        <input type="text" class="form-input" id="signup-name" placeholder="Your name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" id="signup-email" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <div class="password-wrap">
+          <input type="password" class="form-input" id="signup-password" placeholder="Min. 6 characters" style="padding-right:50px"/>
+          <button class="password-toggle" onclick="togglePw('signup-password',this)" type="button">👁</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-input" id="signup-confirm" placeholder="Repeat password"/>
+      </div>
+      <button class="submit-btn" id="signup-btn" onclick="handleSignup()">CREATE ACCOUNT</button>
+      <p class="terms-text">By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="divider"><span>or continue with</span></div>
+
+    <button class="google-btn" onclick="handleGoogle()">
+      <svg class="google-icon" viewBox="0 0 24 24">
+        <path fill="#4285F4" d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+        <path fill="#34A853" d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09C3.515 21.3 7.615 24 12.255 24z"/>
+        <path fill="#FBBC05" d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62h-3.98a11.86 11.86 0 000 10.76l3.98-3.09z"/>
+        <path fill="#EA4335" d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C18.205 1.19 15.495 0 12.255 0c-4.64 0-8.74 2.7-10.71 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+      </svg>
+      Continue with Google
+    </button>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module" src="login.js"></script>
+</body>
+</html>
