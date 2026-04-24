@@ -5,8 +5,8 @@
       --black: #0a0a0a;
       --off-white: #f0ede8;
       --cream: #e8e3db;
-      --accent: #ff3b1f;
-      --accent2: #f5c400;
+      --accent: #cfa924;
+      --accent2: #cfa924;
       --gray: #1c1c1c;
       --mid-gray: #3a3a3a;
       --text-muted: #888;
@@ -19,22 +19,7 @@
       color: var(--off-white);
       font-family: 'Barlow', sans-serif;
       overflow-x: hidden;
-      cursor: none;
     }
-
-    /* Custom cursor */
-    .cursor {
-      position: fixed;
-      width: 12px; height: 12px;
-      background: var(--accent);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s, width 0.2s, height 0.2s;
-      mix-blend-mode: difference;
-    }
-    .cursor.hovering { width: 40px; height: 40px; }
 
     /* NAV */
     nav {
@@ -85,7 +70,7 @@
     }
     .btn-nav:hover { background: var(--off-white); color: var(--black); }
     .btn-nav.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .btn-nav.primary:hover { background: #e02e10; }
+    .btn-nav.primary:hover { background: white; color:var(--black)}
 
     #user-display {
       font-family: 'Space Mono', monospace;

@@ -38,12 +38,6 @@
     const cart = JSON.parse(localStorage.getItem('ut_cart') || '[]');
     document.getElementById('cart-count').textContent = cart.reduce((s,i) => s + i.qty, 0);
 
-    // Custom cursor
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
     document.querySelectorAll('a, button, .cat-card, .product-card').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
